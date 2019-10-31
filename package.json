@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dangrossman/daterangepicker-redux.git"
+    "url": "https://github.com/jgrollman/daterangepicker-redux.git"
   },
   "author": {
     "name": "Dan Grossman",
