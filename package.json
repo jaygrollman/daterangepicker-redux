@@ -19,7 +19,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dangrossman/daterangepicker-redux/issues"
+    "url": "https://github.com/jgrollman/daterangepicker-redux/issues"
   },
   "homepage": "https://github.com/jgrollman/daterangepicker-redux",
   "dependencies": {
