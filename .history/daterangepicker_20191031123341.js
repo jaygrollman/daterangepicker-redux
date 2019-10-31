@@ -588,7 +588,6 @@
 
         updateCalendars: function() {
 
-            //updating this to actually render both timepickers
             if (this.timePicker) {
                 var hour, minute, second;
                 

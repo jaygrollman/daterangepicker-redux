@@ -588,32 +588,32 @@
 
         updateCalendars: function() {
 
-            //updating this to actually render both timepickers
             if (this.timePicker) {
                 var hour, minute, second;
-                
-                hour = parseInt(this.container.find('.left .hourselect').val(), 10);
-                minute = parseInt(this.container.find('.left .minuteselect').val(), 10);
-                second = this.timePickerSeconds ? parseInt(this.container.find('.left .secondselect').val(), 10) : 0;
-                if (!this.timePicker24Hour) {
-                    var ampm = this.container.find('.left .ampmselect').val();
-                    if (ampm === 'PM' && hour < 12)
-                        hour += 12;
-                    if (ampm === 'AM' && hour === 12)
-                        hour = 0;
+                if (this.endDate) {
+                    hour = parseInt(this.container.find('.left .hourselect').val(), 10);
+                    minute = parseInt(this.container.find('.left .minuteselect').val(), 10);
+                    second = this.timePickerSeconds ? parseInt(this.container.find('.left .secondselect').val(), 10) : 0;
+                    if (!this.timePicker24Hour) {
+                        var ampm = this.container.find('.left .ampmselect').val();
+                        if (ampm === 'PM' && hour < 12)
+                            hour += 12;
+                        if (ampm === 'AM' && hour === 12)
+                            hour = 0;
+                    }
+                } else {
+                    hour = parseInt(this.container.find('.right .hourselect').val(), 10);
+                    minute = parseInt(this.container.find('.right .minuteselect').val(), 10);
+                    second = this.timePickerSeconds ? parseInt(this.container.find('.right .secondselect').val(), 10) : 0;
+                    if (!this.timePicker24Hour) {
+                        var ampm = this.container.find('.right .ampmselect').val();
+                        if (ampm === 'PM' && hour < 12)
+                            hour += 12;
+                        if (ampm === 'AM' && hour === 12)
+                            hour = 0;
+                    }
                 }
                 this.leftCalendar.month.hour(hour).minute(minute).second(second);
-                
-                hour = parseInt(this.container.find('.right .hourselect').val(), 10);
-                minute = parseInt(this.container.find('.right .minuteselect').val(), 10);
-                second = this.timePickerSeconds ? parseInt(this.container.find('.right .secondselect').val(), 10) : 0;
-                if (!this.timePicker24Hour) {
-                    var ampm = this.container.find('.right .ampmselect').val();
-                    if (ampm === 'PM' && hour < 12)
-                        hour += 12;
-                    if (ampm === 'AM' && hour === 12)
-                        hour = 0;
-                }
                 this.rightCalendar.month.hour(hour).minute(minute).second(second);
             }
 
